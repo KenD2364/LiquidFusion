@@ -1,0 +1,99 @@
+
+$font-large: 14px;
+$font-xlarge: 16px;
+$font-xxlarge: 18px;
+
+@mixin center-text {
+    transform: translate(-50%,0%);
+    -ms-transform:translate(-50%,0%);
+}
+
+@mixin top-middle {
+    position: absolute;
+    left: 50%;
+}
+
+@mixin card-text-color {
+    color: #fff;
+    background-color: #000;
+}
+
+@mixin arrow-color {
+    color: #000;
+}
+
+.displayNone {
+    display: none;
+}
+
+.cardCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+}
+
+.cardTitle {
+    @include top-middle;
+    top: 16px;
+    @include center-text;
+    font-size: $font-xxlarge;
+    @include card-text-color;
+}
+
+.cardInfo {
+    @include top-middle;
+    top: 50px;
+    @include center-text;
+    font-size: $font-large;
+    @include card-text-color;
+}
+
+.arrowLeft {
+    @include arrow-color;
+    font-size: $font-xxlarge;
+    float: left;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    cursor: pointer;
+}
+
+.arrowLeft:hover {
+    color: #b4aa50;
+}
+
+.arrowRight {
+    @include arrow-color;
+    font-size: $font-xxlarge;
+    float: right;
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    cursor: pointer;
+}
+
+.arrowRight:hover {
+    color: #b4aa50;
+}
+
+.indicators {
+  position: absolute;
+  left: 50%;
+  top: 400px;
+  @include center-text;
+}
+
+.cardInd {
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    background-color: #000;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    border-radius: 50%;
+    border:1px solid #ccc;
+    cursor: pointer;
+}

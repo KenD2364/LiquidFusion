@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style type='text/css'>
+        @import url(css/carousel.css);
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="carousel.js"></script>
+    <script>
+
+    $(document).ready(function() {
+        deck = new Cards('carouselId');
+        deck.displayDeck();
+        deck.deckTimer();
+    });
+    </script>
+</head>
+
+<body>
+    <div id="carouselId" class="moveRight"></div>
+</body>
+</html>
